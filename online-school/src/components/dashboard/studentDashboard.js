@@ -22,7 +22,7 @@ export default class StudentDashboard extends Component {
       return (
         <div>
           <a href={`/classroom/${classroom.classRoomId}`}>
-            {classroom.subjectName}
+            {classroom.classroomsDetails[0].subjectName}
           </a>
         </div>
       );
