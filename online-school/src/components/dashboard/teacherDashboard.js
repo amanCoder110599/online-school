@@ -11,6 +11,7 @@ export default class TeacherDashboard extends Component {
     };
   }
   async componentDidMount() {
+    console.log("Hola");
     await fetch("/classrooms/teacher")
       .then((response) => response.json())
       .then((Classrooms) => {
@@ -44,6 +45,7 @@ export default class TeacherDashboard extends Component {
             Create Classroom
           </Button>
         </div>
+
         <CreateClassRoom
           visible={this.state.createClassroomVisible}
           handleCancel={() => {
