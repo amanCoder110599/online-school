@@ -34,15 +34,6 @@ export default class StudentDashboard extends Component {
     return (
       <div>
         <h3>Welcome to our website</h3>
-        <button
-          onClick={() => {
-            const cookies = new Cookies();
-            cookies.remove("token", { path: "/", domain: "localhost" });
-            this.props.history.push("/");
-          }}
-        >
-          Logout
-        </button>
 
         <div>{this.classRoomList()}</div>
       </div>
