@@ -11,7 +11,6 @@ export default class TeacherDashboard extends Component {
     };
   }
   async componentDidMount() {
-    console.log("Hola");
     await fetch("/classrooms/teacher")
       .then((response) => response.json())
       .then((Classrooms) => {
