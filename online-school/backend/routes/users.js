@@ -10,7 +10,6 @@ router.route("/").get((req, res) => {
 
 router.route("/getbyemail").get(withAuth, async (req, res) => {
   console.log(res.email);
-  console.log("HOla");
   User.findOne({ email: res.email })
     .then((user) => {
       if (user == null) throw "Not Found";
